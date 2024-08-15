@@ -1,0 +1,386 @@
+
+      @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro");
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(88 199 250 / 0%);
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+ 
+h4{
+    font-size: 20px;
+    color: black;
+}
+h6{
+    font-size: 12px;
+   font-weight: 700;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+
+.scroll-watcher{
+    height: 5px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #088178;
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll;
+}
+
+@keyframes scroll-watcher{
+    to {scale: 1 1;}
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background:#e3e6f3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.navbar li a:hover,
+.navbar li a.active{
+  color: #088178;
+  transition: 0.3 ease-in-out
+}
+.navbar li a.active::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background:  #088178;
+  position:absolute;
+  bottom: -4px;
+  left: 20px;
+
+}
+/*home page*/
+.hero1{
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 150px;
+  animation: slideInLeft 1s ease-in 1s 1 normal both;
+  transform: translateX(-50px);
+}
+
+
+@keyframes slideInLeft{
+    from{
+        transform: translateX(-50px);
+    }
+to{
+    transform: translateX(0);
+}
+}
+.hero1 h4{
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+.hero1 h1{
+ color: #088178;
+ font-size: 50px;
+ font-weight: 600;
+ line-height: 64px;
+}
+
+.hero2{
+  background-color:transparent;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid #088178;
+  padding: 2px;
+  cursor: pointer;
+
+}
+
+.hero2:hover{
+  background-color: #088178;
+}
+
+.feature{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+ .fbox{
+  width: 250px;
+  height: 280px;
+  text-align: center;
+  padding: 25px 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  animation: slideInLeft 1s ease-in 0s 1 normal both;
+  transform: translateX(-50px);
+  
+}
+
+.fbox:hover{
+  
+  box-shadow: 20px 20px 34px rgba(0,0,0,0.3);
+}
+
+.fbox h6{
+  color: rgb(35, 28, 29); padding-top: 30px;  font-size: 15px;
+
+}
+
+.product1{
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    animation: slideInLeft 1s ease-in 1s 1 normal both;
+  transform: translateX(-50px);
+}
+
+.card:hover{
+  box-shadow: 20px 20px 34px rgba(0,0,0,0.3);
+}
+
+
+
+/*banner*/
+.banner-main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 15px;
+ background-image: url(https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/banner/b2.jpg?raw=true);
+ background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.2;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 40vh;
+  background-position: center;
+  animation: slideInLeft 1s ease-in 1s 1 normal both;
+  transform: translateX(-50px);
+}
+.blog{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items:center;
+            justify-content: center;
+            animation: slideInLeft 1s ease-in 1s 1 normal both;
+  transform: translateX(-50px);
+            
+        }
+
+.contactb{
+  width: 100%;
+  border: none;
+  background-color: white;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.row{
+  text-align: center;
+  color: #088178;
+}
+
+.expb{
+  padding-top: 30px;
+}
+
+.more{
+  align-items: center; 
+  text-align: center; 
+  color:black; 
+  background-color: white;
+  border-radius: 5px;
+  border-color: #088178;
+  padding: 10px 10px;
+}
+.more:hover{
+  background-color: #088178;
+  border-color: white;
+}
+
+.banner-box{
+  display: flex;
+  align-items:flex-start;
+  justify-content:center;
+  flex-direction: column;
+ background-image: url(https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/banner/b17.jpg?raw=true);
+ background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.2;
+  border: none;
+  outline: none;
+  min-width: 635px;
+  height: 50vh;
+  background-position: center;
+  padding: 30px;
+  animation: slideInLeft 1s ease-in 1s 1 normal both;
+  transform: translateX(-50px);
+}
+
+.section-p1{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.banner-box h4{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+.banner-box h2{
+  color: white;
+  font-size: 32px;
+  font-weight: 800;
+}
+.banner-box span{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.banner-box button{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: white;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  transition: 0.2s;
+}
+.banner-box button:hover{
+  background-color: #088178;
+}
+
+.banner-box2{
+  display: flex;
+  align-items:flex-start;
+  justify-content:center;
+  flex-direction: column;
+ background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.2;
+  border: none;
+  outline: none;
+  min-width: 635px;
+  height: 50vh;
+  background-position: center;
+  padding: 30px;
+  background-image: url(https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/banner/b10.jpg?raw=true);
+}
+
+
+
+.navbar.active{
+  right: 0px;
+}
+
+.navbar li{
+  margin-bottom: 25px;
+}
+
+.addtocart{
+  display: flex;
+  float: right;
+  text-decoration: none;
+  color: #088178;
+  flex-direction:row;
+  padding-right: 70px 150px;
+  align-items: end;
+}
+
+.btn-outline-*{
+  border: none;
+  padding-bottom: 20px;
+}
+.btn-outline-*:hover{
+  border: 1px solid  #088178;
+}
+
+
+
+/*animation*/
+.backvideo{
+  position: absolute;   
+  width: 100%;          
+  opacity: 0.5;
+}
